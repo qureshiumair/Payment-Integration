@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <style>
+          body{
+               overflow: hidden; 
+          }
+          #a{
+          
+          color:seashell
+          }
+          #b{
+          
+               color:seashell
+               }
+               #c{
+          
+                    background-color:black
+                    }
+     </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>The Spark Foundation </title>
+</head>
+
+<body>
+     {%load static%}
+     
+<img src="{% static '1.jpg' %}" width="100%" alt="My image">
+    {% block content %}
+
+    {% endblock content %} 
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<head>
+    <style>
+        .center {
+            position: absolute;
+            text-align: center;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .a{
+            color:yellow ;
+        }
+        #b{
+            color:cornsilk
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center">
+        <h3 class="a">
+            Thanks, You are aweseome!{{b}} <i class="fas fa-check-circle"></i>
+        </h3>
+        <p class="a">Giving money to those in need can be a personally satisfying experience, but there is a choice between donating nationally and internationally through charities or giving directly to those around you. This essay will consider the merits of both approaches. 
+
+            The first advantage of providing direct support is that you can know exactly how your money is being spent. For example, if you give money directly to people in your local village or town, you can see where it has gone. When you donate to larger charitable organisations, on the other hand, you are not sure how much will actually be given to those in need as opposed going on other costs such as administration and expensive marketing campaigns. Another benefit is that you can see the impacts on those you are helping, which can lead not only to great personal satisfaction but also to respect from others in the local community who appreciate the work you do.</p>
+        <h5 id="b">
+            <a href="http://127.0.0.1:8000/home" id="b">
+                Help Another Life Donate Now|
+            </a>
+            <a id="b" href="https://www.thesparksfoundationsingapore.org/">
+                About Us
+            </a>
+        </h5>
+    </div> 
+</body>
+
+{% endblock content %}

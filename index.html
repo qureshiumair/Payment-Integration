@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<head>
+    <style>
+        .center {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+
+<div class="center">
+
+    <form class="text-center border border-light p-5"  method="POST" id="c">
+        {% csrf_token %}
+
+        <p class="h3 mb-3" id="a">The Spark Foundation Trust </p>
+        <p id="b">Your Small Help Can Change Someone Life</p>
+
+        <input type="name" name="name" id="name" required class="form-control mb-4" placeholder="Name">
+
+        <!-- RAZORPAY INTEGRATION HERE -->
+        <script src="https://checkout.razorpay.com/v1/checkout.js" data-key="rzp_test_0yjbWo8nLJPZCK"
+            data-amount="10000" data-currency="INR" data-order_id="{{payment.id}}" data-buttontext="Donate"
+            data-name="Donation" data-description="Donation For The Spark Foundation"
+            data-image="https://media-exp1.licdn.com/dms/image/C560BAQFgHU3sTF4LfQ/company-logo_200_200/0/1519895156650?e=2159024400&v=beta&t=1iqBaESC2l4UUW7JjEjq0R_HQhwRTaaqyQG1k46q4bs" data-prefill.name="PC" data-prefill.email="Please Enter Your Mail Id"
+            data-theme.color="violet"></script>
+    </form>
+
+</div>
+
+
+</div>
+{% endblock %}
